@@ -2,9 +2,12 @@ html, body {
   background-color: hsl(0, 0%, 11%);
   margin: 0;
   height: 100%;
+  font-family: "Inter", sans-serif;
+
 }
 * {
   box-sizing: border-box;
+  
 }
 header {
   background-image: url("/images/backgroud-img.png");
@@ -47,6 +50,7 @@ h2 {
   align-self: stretch;
   padding: 0em 2em;
   cursor: pointer;
+  font-weight: bold;
 }
 #search-input{
   justify-self:left;
@@ -80,10 +84,9 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  
-  
-}
+  margin: 1em 0;
+  max-width: 50%;
+  }
 .explore-text {
   color:#DFDDDD;
 }
@@ -103,4 +106,95 @@ main{
   padding: 1em;
   height: 100%;
  
+}
+
+.empty-watchlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:1em;
+  height: 100%;
+}
+.movie-list h3 { 
+  color: #DFDDDD;
+  margin-bottom: 0;
+
+}
+.empty-watchlist h4 {
+   color: #363636;
+
+}
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1em;
+  width: 100%;
+  
+}
+p.movie-plot{
+  margin:0;
+  color: #6B7280;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+.movie { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  border-bottom: 2px solid #E5E7EB;
+  padding: 2em 0;
+}
+
+.movie-poster {
+  width: 30%;
+  border-radius: 4px
+}
+.movie-title-rating {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1em;
+}
+h3.movie-title {
+  margin: 0;
+  color: #363636;
+}
+.movie-runtime-genre{
+  display: flex;
+  gap:1em;
+  justify-content: start;
+  align-items: center;
+}
+p.movie-runtime, p.movie-genre {
+  margin: 0;
+  font-size:0.8em;
+  color: #111827;
+}
+.add-to-watchlist-container {
+  display: flex;
+  align-items: center;
+}
+button.add-to-watchlist {
+  border: none;
+  
+  cursor: pointer;
+  appearance: none;
+  background-color: transparent;
+  
+}
+
+.movie-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+.movie-rating p {
+  font-size: 0.7em;
 }
