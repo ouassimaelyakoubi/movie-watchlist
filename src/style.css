@@ -116,7 +116,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:1em;
+  gap:0.5em;
   height: 100%;
 }
 .watchlist h3 { 
@@ -190,7 +190,8 @@ p.movie-runtime, p.movie-genre {
   align-items: center;  
 }
 img.add-icon {
-  width: 1em;
+  width: 1.2em;
+  height: 1.2em;
 }
 
 button.add-to-watchlist, button.remove-btn {
@@ -216,13 +217,13 @@ button.add-to-watchlist:hover, button.remove-btn:hover {
 }
 
 @media (min-width: 768px) {
-  .movie-list {
-    max-width: 60%;
+  .movie-list, .watchlist {
+    max-width: 50%;
     margin: 1em 0;
     
   }
   .movie-poster{
-    width: 40%;
+    width: 30%;
    
   }
   .movie-info {
@@ -230,7 +231,7 @@ button.add-to-watchlist:hover, button.remove-btn:hover {
     
   }
   h3.movie-title {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
   .movie {
     padding: 2em 0;
@@ -241,30 +242,37 @@ button.add-to-watchlist:hover, button.remove-btn:hover {
     gap: 1em;
   }
   p.footer{
-  font-size: 1em;
-}
+    font-size: 1em;
+  }
   p.movie-runtime, p.movie-genre {
-  margin: 0;
-  font-size:0.7em;
-  color: #111827;
-}
-.layout {
-  padding: 1em;
-}
 
-h1 {
-  font-size: 1.5em;
-}
-h2 {
-  font-size: 1em;
-  margin: 0;
-}
-.search-icon {
-  width: 1.3em;
-  height: 1.3em;
-  
-}
-.watchlist h3{
-  font-size: 1.2em;
+    font-size:0.9em;
+  }
+  button.add-to-watchlist, button.remove-btn {
+    font-size: 0.9em;
+  }
+  .layout {
+    padding: 1em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  .search-icon {
+    width: 1.3em;
+    height: 1.3em;
+
+  }
+  .watchlist h3{
+    font-size: 1.2em;
+  }
+  p.movie-plot{
+    font-size: 1em;
+  }
+  .movie-rating p {
+  font-size: 0.9em;
 }
 }
