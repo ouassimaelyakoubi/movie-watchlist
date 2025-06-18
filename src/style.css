@@ -16,15 +16,15 @@ header {
   justify-content:space-between;
   color: white;
   padding: 1em 0.5em;
-  height: 8em;
+  min-height: 8em;
   align-items: center;
   position: relative;
 }
 h1 {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 h2 {
-  font-size: 1.2em;
+  font-size: 0.9em;
   margin: 0;
 }
 
@@ -76,16 +76,19 @@ h2 {
   padding: 1em;
   margin: 0;
   margin-top: 1em;
+  
 }
-
+p.footer{
+  font-size: 0.8em;
+}
 
 .movie-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1em 0;
-  max-width: 50%;
+  padding: 1em;
+  max-width: 100%;
   }
 .explore-text {
   color:#DFDDDD;
@@ -128,7 +131,7 @@ main{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   gap: 1em;
   width: 100%;
   
@@ -136,6 +139,7 @@ main{
 p.movie-plot{
   margin:0;
   color: #6B7280;
+  font-size: 0.75em;
 }
 a {
   text-decoration: none;
@@ -145,49 +149,59 @@ a {
 
 .movie { 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+  gap: 0.8em;
   border-bottom: 2px solid #E5E7EB;
-  padding: 2em 0;
+  padding: 1.1em 0;
 }
 
 .movie-poster {
-  width: 30%;
+  width: 90%;
   border-radius: 4px
 }
 .movie-title-rating {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 1em;
+  gap: 0.5em;
 }
 h3.movie-title {
   margin: 0;
   color: #363636;
+  font-size: 0.9em;
 }
 .movie-runtime-genre{
   display: flex;
-  gap:1em;
+  gap:0.5em;
   justify-content: start;
   align-items: center;
 }
 p.movie-runtime, p.movie-genre {
   margin: 0;
-  font-size:0.8em;
+  font-size:0.7em;
   color: #111827;
 }
-.add-to-watchlist-container {
+.add-to-watchlist-container, .remove-from-watchlist {
   display: flex;
-  align-items: center;
+  align-items: center;  
 }
-button.add-to-watchlist {
+img.add-icon {
+  width: 1em;
+}
+
+button.add-to-watchlist, button.remove-btn {
   border: none;
-  
   cursor: pointer;
   appearance: none;
   background-color: transparent;
+  font-size: 0.7em;
+  color: #111827;
   
+}
+button.add-to-watchlist:hover, button.remove-btn:hover {
+  color: grey;
 }
 
 .movie-rating {
@@ -197,4 +211,40 @@ button.add-to-watchlist {
 }
 .movie-rating p {
   font-size: 0.7em;
+}
+
+@media (min-width: 768px) {
+  .movie-list {
+    max-width: 60%;
+    margin: 1em 0;
+    
+  }
+  .movie-poster{
+    width: 40%;
+   
+  }
+  .movie-info {
+    align-items: start;
+    
+  }
+  h3.movie-title {
+    font-size: 1.2em;
+  }
+  .movie {
+    padding: 2em 0;
+    gap: 2em;
+    flex-direction: row;
+  }
+  .movie-title-rating, .movie-runtime-genre {
+    gap: 1em;
+  }
+  p.footer{
+  font-size: 1em;
+}
+  p.movie-runtime, p.movie-genre {
+  margin: 0;
+  font-size:0.7em;
+  color: #111827;
+}
+
 }
