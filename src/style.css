@@ -80,6 +80,10 @@ h1 {
 h2 {
   font-size: 0.9em;
   margin: 0;
+  cursor: pointer;
+}
+h2:hover {
+  color: #A5A5A5;
 }
 
 .search-container {
