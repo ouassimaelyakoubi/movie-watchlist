@@ -1,5 +1,5 @@
 (() => {
-  // Set the theme before DOM paints (use this in <head> for better UX)
+  // Set the theme before DOM paints 
   const savedTheme = localStorage.getItem('theme') || 'light';
   if (savedTheme === 'dark') {
     document.body.classList.add('dark-mode');
