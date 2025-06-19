@@ -1,3 +1,11 @@
+
+(() => {
+  // Set the theme before DOM paints (use this in <head> for better UX)
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+})();
 const container = document.getElementById('watchlist');
 
 function loadWatchlist() {
@@ -48,3 +56,33 @@ container.addEventListener('click', (e) => {
 });
 
 document.addEventListener('DOMContentLoaded', loadWatchlist);
+const toggleBtn = document.getElementById('theme-toggle');
+const icon = toggleBtn.querySelector('.icon');
+
+function updateAddIconsForTheme(theme) {
+  document.querySelectorAll('.add-icon').forEach(img => {
+    img.src = theme === 'light'
+      ? './images/add-icon-dark.png'
+      : './images/add-icon-light.png';
+  });
+}
+
+function setTheme(theme) {
+  document.body.classList.toggle('dark-mode', theme === 'dark');
+  icon.textContent = theme === 'dark' ? '🌙' : '☀️';
+  localStorage.setItem('theme', theme);
+
+  // Update icons based on current theme
+  updateAddIconsForTheme(theme);
+}
+
+toggleBtn.addEventListener('click', () => {
+  const isDark = document.body.classList.contains('dark-mode');
+  setTheme(isDark ? 'light' : 'dark');
+});
+
+// Load saved theme
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  setTheme(savedTheme);
+});

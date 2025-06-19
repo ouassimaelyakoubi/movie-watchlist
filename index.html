@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/movieIcon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+    (function() {
+      const theme = localStorage.getItem('theme') || 'dark';
+      if (theme === 'light') {
+        document.documentElement.classList.add('light-mode');
+      }
+    })();
+  </script>
     <link rel="stylesheet" href="/src/style.css" />
     <meta name="description" content="A simple movie watchlist app to track your favorite movies." />
     <meta name="keywords" content="movies, watchlist, app, tracking, favorites" />
@@ -16,12 +24,19 @@
   <body>
     <div class="layout">
     <header>
-      <h1>Find your film</h1>
-      <a href="/myWatchlist.html"><h2>My watchlist</h2></a>
-      <div class="search-container">
-        <img src="/images/search-icon.png" alt="search Icon" class="search-icon" />
-        <input type="text" id="search-input" placeholder="Searching something with no data" />
-        <button id="search-button">Search</button>
+      <div class="dark-mode-toggle-container">
+        <button id="theme-toggle" class="theme-toggle">
+          <span class="icon">🌙</span>
+        </button>
+      </div>
+      <div class="header-content">
+        <h1>Find your film</h1>
+        <a href="/myWatchlist.html"><h2>My watchlist</h2></a>
+        <div class="search-container">
+          <img src="/images/search-icon.png" alt="search Icon" class="search-icon" />
+          <input type="text" id="search-input" placeholder="Searching something with no data" />
+          <button id="search-button">Search</button>
+        </div>
       </div>
     </header>
         <!-- More movie items can be added here -->
